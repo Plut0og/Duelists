@@ -1,0 +1,57 @@
+{
+
+
+  "Spaticus":{
+    "name":"Spaticus",
+    "image":"Assets/Spaticus/Spaticus_Def.PNG",
+    "defaultAnimation":{
+      "number":0,
+      "length":0,
+      "frames":[
+        "Assets/Spaticus/Spaticus_Def.PNG"
+      ]
+    },
+    "stats":{
+      "moveSpeed":10,
+      "rotationSpeed":10,
+      "health":100
+    },
+    "Attacks":{
+      "basicAttack":{
+        "name": "spearThrow",
+        "number":0,
+        "damage":10,
+        "type":"projectile",
+        "projectile":{
+          "speed":5,
+          "startRelX":64,
+          "startRelY":-92,
+          "image":"Assets/Spaticus/Spear.PNG",
+          "hitBox":[
+            {
+              "startX":0,
+              "startY":44,
+              "width":12,
+              "height":104
+            }
+          ]
+        },
+        "mods":{},
+        "animation":{
+          "number":1,
+          "length":7,
+          "frames":[
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F1.PNG",
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F2.PNG",
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F3.PNG",
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F4.PNG",
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F5.PNG",
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F6.PNG",
+            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F7.PNG"
+          ]
+        }
+      }
+    }
+
+  }
+}
