@@ -41,13 +41,13 @@
           "number":1,
           "length":7,
           "frames":[
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F1.PNG",
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F2.PNG",
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F3.PNG",
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F4.PNG",
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F5.PNG",
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F6.PNG",
-            "/home/swyngaard/PycharmProjects/Brawler/Assets/Spaticus/BasicAttack/F7.PNG"
+            "Assets/Spaticus/BasicAttack/F1.PNG",
+            "Assets/Spaticus/BasicAttack/F2.PNG",
+            "Assets/Spaticus/BasicAttack/F3.PNG",
+            "Assets/Spaticus/BasicAttack/F4.PNG",
+            "Assets/Spaticus/BasicAttack/F5.PNG",
+            "Assets/Spaticus/BasicAttack/F6.PNG",
+            "Assets/Spaticus/BasicAttack/F7.PNG"
           ]
         }
       }

@@ -81,19 +81,16 @@ class multiplayerHandler():
             self.handleData(data)
     def checkRaw(self, rawData):
         raw = rawData
-        print(raw)
         brack = 0
         for i, v in enumerate(raw):
             if (not i == 0):
                 if (brack == 0 and v == "{"):
-                    print("ehllo")
-                    lengthToEnd = (len(raw)) - i
-                    raw = raw[lengthToEnd:]
+                    lengthFromBegin = i
+                    raw = raw[lengthFromBegin:]
             if (v == '{'):
                 brack += 1
             elif (v == '}'):
                 brack -= 1
-        print(raw)
         return raw
 
     def sendData(self):
@@ -121,10 +118,9 @@ class multiplayerHandler():
 
     def handleData(self, data):
 
-        if(globals.externalHost.currentAttack != None):
+        if(data['currentAttack']['number'] != None):
             globals.externalHost.fight(data['currentAttack']['number'])
         if(globals.externalHost.angle != data['angle']):
-            print(str(globals.externalHost.angle) + " " + str(data['angle']))
             globals.externalHost.rotate(data['angle'])
 
         globals.externalHost.moveTo(data['x'], data['y'])

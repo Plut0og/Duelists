@@ -1,6 +1,7 @@
 from sprite import sprite
 import math
 import pygame
+from area import hitBox
 from globals import globals
 from gamedata import gameData
 
