@@ -55,8 +55,8 @@ def mainLoop():
         handleInput()
 
         update()
-        if(counter % 10 == 1):
-            globals.multHandler.sendData()
+        #if(counter % 1 == 1):
+        globals.multHandler.sendData()
 
         draw()
         counter += 1

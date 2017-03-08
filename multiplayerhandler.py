@@ -31,6 +31,7 @@ class multiplayerHandler():
 
     def main(self):
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        #self.s.setblocking(0)
 
         if (self.clientType == 2):
             self.s.bind((self.hostAddr, self.port))
@@ -70,14 +71,30 @@ class multiplayerHandler():
     def listen(self):
         while(globals.isRunning):
             if (self.clientType == 1):
-                raw = self.s.recvfrom(1024)
-                print(raw)
-                data = json.loads(raw[0])
+                raw = (self.s.recvfrom(1024))[0]
+                raw = self.checkRaw(raw)
+                data = json.loads(raw)
             elif (self.clientType == 2):
-                raw = self.c.recvfrom(1024)
-                print(raw)
-                data = json.loads(raw[0])
+                raw = (self.c.recvfrom(1024))[0]
+                raw = self.checkRaw(raw)
+                data = json.loads(raw)
             self.handleData(data)
+    def checkRaw(self, rawData):
+        raw = rawData
+        print(raw)
+        brack = 0
+        for i, v in enumerate(raw):
+            if (not i == 0):
+                if (brack == 0 and v == "{"):
+                    print("ehllo")
+                    lengthToEnd = (len(raw)) - i
+                    raw = raw[lengthToEnd:]
+            if (v == '{'):
+                brack += 1
+            elif (v == '}'):
+                brack -= 1
+        print(raw)
+        return raw
 
     def sendData(self):
 
